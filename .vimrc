@@ -2,11 +2,13 @@
 " michael@galanakis.dk
 
 """ Experimental
-set wildmenu
-set wildchar=<TAB>
-set clipboard=unnamedplus
 
 """ Basic
+set wildmenu
+set wildchar=<TAB>
+set clipboard=unnamedplus " must use vim-gtk for this to work
+
+
 " Sets how many lines of history VIM has to remember
 set history=700
 syntax on
@@ -20,7 +22,9 @@ set autoread
 
 """ Appearance
 set so=7 " 7 lines from the cursor
-colorscheme metacosm
+
+set t_Co=256 
+colorscheme vim-distinguished 
 
 """ Searching
 set ignorecase
