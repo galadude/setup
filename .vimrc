@@ -3,6 +3,17 @@
 
 """ Experimental
 
+""" Plugins
+nmap <F3> :TagbarToggle<CR>
+nnoremap <F1> :MRU<cr>
+
+  "" Unite
+  nnoremap <C-p> :Unite file_rec<cr>
+  nnoremap <space>/ :Unite <cr>
+  let g:unite_source_history_yank_enable = 1
+  nnoremap <space>y :Unite history/yank<cr>
+  nnoremap <space>b :Unite -quick-match buffer<cr>
+
 """ Basic
 set wildmenu
 set wildchar=<TAB>
@@ -30,7 +41,9 @@ colorscheme vim-distinguished
 set ignorecase
 set hlsearch
 set incsearch
+set gdefault " sets the %s//g as default
 
+map <F2> :%s/
 " Remap
 map <space> /
 map <c-space> ?
@@ -42,8 +55,28 @@ set autoindent
 set smartindent
 set tabstop=2
 set shiftwidth=4
-set pastetoggle=<Leader>p
+"set pastetoggle=p
 
+""" splits
+" Easy move between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Make j and k move up and down, regardless of line wraps etc.
+nnoremap j gj
+nnoremap k gk
+
+" comma removes search results
+nnoremap , :noh<cr>
+
+""" Indent foldning
+if has("folding")
+    set foldenable
+    set foldmethod=indent
+    set foldlevelstart=99
+endif
 
 """ Remove no from nocursorcolumn to get fancy crosshair
 set nocursorcolumn
@@ -67,7 +100,6 @@ set laststatus=2
     map <F7> 0
     map <F8> $
 
-"""" MOVEMENT
-" Make tab jump to next bracket
-nnoremap <tab> %
-vnoremap <tab> %
+    " Make tab jump to next bracket
+    nnoremap <tab> %
+    vnoremap <tab> %

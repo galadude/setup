@@ -17,6 +17,9 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
+## Make touchpad inactive shortly after typing
+syndaemon -i 0.3 -t -d
+
 ## Auto start xmod
 xmodmap ~/.Xmodmap 
 

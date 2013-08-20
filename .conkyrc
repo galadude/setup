@@ -47,37 +47,15 @@ override_utf8_locale no
 #  Output
 ##############################################
 TEXT
-${font Segoe WP:REGULAR:size=9}P R O C E S S O R S 
-${hr 2}
-${font Segoe WP:light:size=9}${cpugraph cpu1}
-CPU1: ${cpu cpu1}% ${cpubar cpu1}
+Todo
+${hr}
+Libreoffice vim navigation
 
-${font Segoe WP:REGULAR:size=9}M E M O R Y
-${hr 2}
-${font Segoe WP:light:size=9}RAM $alignc $mem / $memmax $alignr $memperc%
-$membar
+TERMINATOR
+${hr}
+Ctrl+Shift+X -  Toggle 
+Ctrl+Shift+O - Split Horizontally.
+Ctrl+Shift+E - Split Vertically.
+Ctrl+Shift+Arrow- Move parent .
+Ctrl+Zero - Restore font size.
 
-${font Segoe WP:REGULAR:size=9}D I S K S 
-${hr 2}
-${font Segoe WP:light:size=9}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
-${fs_bar /}
-SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
-${swapbar}
-
-${font Segoe WP:REGULAR:size=9}T O P  P R O C E S S E S 
-${hr 2}
-${font Segoe WP:light:size=9}${top_mem name 1}${alignr}${top mem 1} %
-${top_mem name 2}${alignr}${top mem 2} %
-${font Segoe WP:light:size=9}${top_mem name 3}${alignr}${top mem 3} %
-${font Segoe WP:light:size=9}${top_mem name 4}${alignr}${top mem 4} %
-${font Segoe WP:light:size=9}${top_mem name 5}${alignr}${top mem 5} %
-
-${font Segoe WP:REGULAR:size=9}N E T W O R K 
-${hr 2}
-${font Segoe WP:light:size=9}IP address: $alignr ${addr wlan0}
-ESSID: $alignr ${wireless_essid wlan0}
-Connection quality: $alignr ${wireless_link_qual_perc wlan0}%
-${downspeedgraph wlan0}
-DLS:${downspeed wlan0} kb/s $alignr total: ${totaldown wlan0}
-${upspeedgraph wlan0}
-ULS:${upspeed wlan0} kb/s $alignr total: ${totalup wlan0}
